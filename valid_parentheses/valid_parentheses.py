@@ -1,5 +1,5 @@
 # 20. Valid Parentheses
-# Easy
+# Easy Stack Problem
 
 '''
 Given a string s containing just the characters 
@@ -69,5 +69,5 @@ def isValid(s):
     stack = []                                     # Variable space O(n)
     for i in range(len(s)):                       # Counter variable O(1)
         # ... rest of code
-        
+
 '''
