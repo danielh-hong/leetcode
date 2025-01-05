@@ -1,4 +1,5 @@
 # Easy, 125. Valid Palindrome (2 pointer)
+# (Solved)
 
 '''
 A phrase is a palindrome if, after converting all uppercase letters 

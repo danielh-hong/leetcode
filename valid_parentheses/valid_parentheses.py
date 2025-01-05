@@ -1,5 +1,6 @@
 # 20. Valid Parentheses
 # Easy Stack Problem
+# (Solved)
 
 '''
 Given a string s containing just the characters 
