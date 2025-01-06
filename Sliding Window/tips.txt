@@ -1,0 +1,47 @@
+The sliding window technique is typically used when a 
+problem involves subarrays or substrings of a given array or 
+string, and the goal is to optimize the process of finding 
+certain properties, such as size, sum, or count, in these subarrays/substrings. 
+It is especially useful when the problem involves contiguous elements.
+
+When to Use Sliding Window
+You should consider using the sliding window technique when:
+
+The Problem Involves Contiguous Subarrays/Substrings:
+
+The problem explicitly mentions finding or optimizing something within a range of contiguous elements.
+You Need to Optimize Performance:
+
+A brute force approach might require nested loops to 
+calculate the desired property for all subarrays/substrings, resulting in 
+O(n^2) or worse time complexity.
+
+The sliding window technique can often reduce this to O(n).
+The Window Size Can Be Fixed or Dynamic:
+The window size might remain constant (e.g., finding maximum sum of a subarray of size (k)).
+The window size might expand and contract based on certain conditions 
+(e.g., finding the smallest subarray with a sum ≥ target).
+
+### Common Use Cases for Sliding Window Technique
+
+1. **Maximum/Minimum of Subarrays**
+   - Find max or min sum, value, or product in a subarray.
+   - Example: Max sum of subarray of size k.
+
+2. **Finding Longest/Shortest Substrings**
+   - Longest substring with no repeating characters.
+   - Smallest substring containing all chars of another string.
+
+3. **Counting Subarrays or Substrings**
+   - Count subarrays with sum equal to a target.
+   - Count substrings with exactly k distinct chars.
+
+4. **Continuous Properties in Arrays/Strings**
+   - Max vowels in a substring of fixed size.
+   - Check if any subarray meets specific criteria.
+
+---
+
+### When Not to Use Sliding Window
+1. If the solution doesn't require contiguous elements.
+2. If the problem involves non-overlapping sets or windows.
