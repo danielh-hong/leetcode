@@ -36,10 +36,11 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 # ... maybe always moving right pointer works?
 
 # done by self
+# O(n) solution, since for loop at most goes through n elements and while loop at most goes through n elements (which is 2n max iterations)
 def maxProfit(prices):
     n = len(prices)
     max_profit = 0
-    left = 0
+    left = 0 # tracks lowest price
     for right in range(len(prices)):
         # we only want left to point to values that are smaller than the current left
         # When prices[right] < prices[left] then its a smaller value so we go to it
@@ -57,6 +58,21 @@ maxProfit([3,1,5,0,6,4])
 
 
 
+# optimized solution O(n), not O(2n) since no while loop and one iteration with direct updates
+# basically min_price is equivalent to left pointer, and we update it whenever we find a smaller value
+# and with the main right pointer (price) we check the profit for each thing.
+# very simple and straightforward if we think about it 
+def maxProfitGood(prices):
+    max_profit = 0
+    min_price = float('inf') # track the minimum price seen so far
+    
+    for price in prices:
+        # update the minimum price
+        if price < min_price:
+            min_price = price
+        else:
+            max_profit = max(max_profit, price - min_price)
+    return max_profit
 
 
 
