@@ -48,6 +48,36 @@ Use the signature as a key in the dictionary and append the word to the correspo
 Finally, collect all the values from the dictionary to get the grouped anagrams.
 '''
 
+
+strs = ["nozzle","punjabi","waterlogged","imprison","crux","numismatists","sultans","rambles","deprecating"]
+
+# Better solution, using values()class Solution(object):
+def groupAnagramsBest(strs):
+    """
+    :type strs: List[str]
+    :rtype: List[List[str]]
+    """
+    # create object of anagram groups, keys being the str sorted and 
+    # values being a list of strings that anagram to it
+    groups = {}
+
+    # for each str in strs, check if the str sorted is a key
+    for s in strs: # O(n)
+        # if str sorted in a key, add str to its list
+        sort = ''.join(sorted(s)) # O(k log k))
+        if sort in groups:
+            groups[sort].append(s)
+        # if not, create a key of the sorted str in object with list of str
+        else:
+            groups[sort] = [s]
+    
+    # return the object values in a list, which contains the groups of anagrams
+    print("strs gropu values: ", groups.values())
+    return groups.values()
+
+groupAnagramsBest(strs)
+
+
 # Good solution, O(n * k log k), where n is # of strings in input array, k is max length of any string, k log k is from sorting each string
 # Space complexity: O(n * k) to store all strings in the hashmap
 def groupAnagrams(strs):
@@ -109,7 +139,6 @@ a = "".join(sorted("lkfjgfv")) # separator.join(iterable), sorted is O(n log n),
 # separator in this case is nothing, and it separates each item in the iterable to make it a string
 print(a)
 
-strs = ["nozzle","punjabi","waterlogged","imprison","crux","numismatists","sultans","rambles","deprecating"]
 for i in range(len(strs)):
     str_key = "".join(sorted(strs[i])) # O(n log n) for string
     print(str_key)

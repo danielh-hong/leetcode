@@ -14,7 +14,7 @@ class LinkedList:
     def append(self, value):
         """Add a node at the end."""
         new_node = Node(value)
-        if not self.head:
+        if not self.head: # equivalent to if self.head is None
             self.head = new_node
             return
         current = self.head
