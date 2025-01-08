@@ -35,23 +35,7 @@
 # Therefore index1 = 1, index2 = 2. We return [1, 2].
 
 
-# Bad solution (Not using two pointers):
-def twoSum(numbers, target):
-    """
-    :type numbers: List[int]
-    :type target: int
-    :rtype: List[int]
-    """
-    seen_nums = {} # dict, num, index (1-index)
-    for i in range(len(numbers)): # O(n)
-        complement = target - numbers[i] # O(1)
-        if complement in seen_nums: # O(1) lookup
-            return [seen_nums[complement], i+1]
-        else:
-            seen_nums[numbers[i]] = i+1
-    return False
 
-        
 # Good solution (using two pointer method, using the fact that array is sorted):
 '''
 Given the constraints that the input array is sorted and there is exactly one solution, 
@@ -84,3 +68,21 @@ def twoSumGood(numbers, target):
             left += 1
         else:
             right -= 1
+
+# Bad solution (Not using two pointers):
+def twoSum(numbers, target):
+    """
+    :type numbers: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    seen_nums = {} # dict, num, index (1-index)
+    for i in range(len(numbers)): # O(n)
+        complement = target - numbers[i] # O(1)
+        if complement in seen_nums: # O(1) lookup
+            return [seen_nums[complement], i+1]
+        else:
+            seen_nums[numbers[i]] = i+1
+    return False
+
+    
