@@ -94,6 +94,9 @@ def groupAnagrams(strs):
   for item in visited.values(): # .key, .values, .items
       ret.append(item)
 
+  # Should be O(n) as well:
+  # return list(visited.values())
+
   return ret
     
       

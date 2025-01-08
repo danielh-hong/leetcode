@@ -21,6 +21,7 @@ frequent elements. You may return the answer in any order.
 Total: O(n log n)
 '''
 
+# Decent ish solution (O(n log n))
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
