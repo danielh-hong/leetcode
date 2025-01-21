@@ -35,3 +35,12 @@ class Solution(object):
         """
         # O(n^2) position
         ret = []
+
+        m = max(candies)
+        for candy in candies:
+            if candy + extraCandies >= m:
+                ret.append(True)
+            else:
+                ret.append(False)
+        
+        return ret

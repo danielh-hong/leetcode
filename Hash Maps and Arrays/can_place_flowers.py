@@ -36,6 +36,9 @@ class Solution(object):
         elif n == 0 or len(flowerbed) == 1 and flowerbed[0] == 0 and n == 1:
             return True
         
+        # if len(flowerbed) == 1:
+        #     return (flowerbed[0] == 0 and n <= 1) or n == 0
+        
         if flowerbed[0] == 0 and flowerbed[1] == 0:
             flowerbed[0] = 1
             n -= 1
