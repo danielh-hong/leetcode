@@ -1,5 +1,5 @@
 '''
-151. Reverse Words in a String
+151. Reverse Words in a String (Easy) (Complete)
 Solved
 Medium
 Topics
@@ -56,4 +56,4 @@ class Solution(object):
     # each time the string is redefined, another memory allocation
     # has to happen
         
-        
+    # alternateive solution: return " ".join(s.split()[::-1])
