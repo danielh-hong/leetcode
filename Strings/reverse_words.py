@@ -56,4 +56,4 @@ class Solution(object):
     # each time the string is redefined, another memory allocation
     # has to happen
         
-    # alternateive solution: return " ".join(s.split()[::-1])
+    # alternateive solution: 5return " ".join(s.split()[::-1])
