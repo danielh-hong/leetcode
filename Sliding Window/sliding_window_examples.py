@@ -1,6 +1,6 @@
 # Sliding window examples:
 
-# Easy: Maximum Sum of a Subarray of Size K
+# Easy: Maximum Sum of a Subarray of Size K (can solve)
 def max_sum_subarray(arr, k):
     """
     Function to find the maximum sum of a subarray of size k.
