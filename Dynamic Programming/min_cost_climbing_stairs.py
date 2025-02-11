@@ -34,6 +34,7 @@ The total cost is 6.
 # Use dynamic programming approach. Can either reach 
 # from n - 2 cost + current cost or from n - 1 cost + current cost.
 # then set current cost to the cheaper option checking between those two
+# O(1) space with O(n) time complexity
 def minCostClimbingStairs(cost):
     c1 = cost[0]
     c2 = cost[1]

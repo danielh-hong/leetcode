@@ -31,11 +31,12 @@ def climbStairsLoop(n):
     s1 = 1
     s2 = 2
 
-    return 1 if n == 1 else None
+    if n == 1:
+        return 1
 
     for i in range(3, n+1):
         temp = s2
         s2 = s2 + s1
         s1 = temp
 
-    return 
+    return s2
