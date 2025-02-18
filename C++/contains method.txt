@@ -1,0 +1,10 @@
+// These have .contains():
+map<key, value>
+set<value>
+unordered_map<key, value>
+unordered_set<value>
+
+// These don't:
+vector<value>  // No .contains()
+array<value>   // No .contains()
+list<value>    // No .contains()

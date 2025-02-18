@@ -1,0 +1,51 @@
+- lists are vectors use <>. Just like in math.
+- vectors are dynamic size (automatically get realloced) and u define them like std::vector<data_type>
+  just think u always want to put the data type inside of it.
+- unordered_map = dictionary and they use similar brackets. std::unordered_map<key data type, value data type>
+  example: std::unordered_map<int, int> dict = {{1, 5}, {3, 6}, {5, 8}}
+  can modify the values like dict[1] = 7. or add like dict[9] = 10
+- can write at top use namespace std if we don't want to manually write std
+- also #include <iostream> #include <vector>
+- return zero at end of main, think 0 = full loop = complete, but compiler implicitely adds now a days
+- sets in C++: unordered_set<type (i.e. int)> = {1, 2 ,3 ,4, 5, 6} i think type is variable.
+- cast size_t to int if needed so no issues with negative being converted to a signed
+
+vector methods (python vs C++ comparison):
+lst.append(x)	vec.push_back(x)
+lst.pop()	vec.pop_back()
+lst.sort()	sort(vec.begin(), vec.end())
+lst.reverse()	reverse(vec.begin(), vec.end())
+len(lst)	vec.size()
+lst.insert(i, x)	vec.insert(vec.begin() + i, x)
+lst.remove(x)	vec.erase(find(vec.begin(), vec.end(), x))
+lst.clear()	vec.clear()
+
+
+How to Search in vector, unordered_map, and unordered_set?
+Container	Search Method	Time Complexity:
+
+vector<T>:
+find(v.begin(), v.end(), x) != v.end()	
+O(n)
+
+unordered_map<K, V>	
+mp.find(k) != mp.end()	
+O(1)
+
+unordered_set<T>	
+s.find(x) != s.end()	
+O(1)
+
+Dereferencing:
+
+map<string, int> ages = {{"Alice", 25}, {"Bob", 30}};
+
+auto it = ages.find("Alice");
+if (it != ages.end()) {
+    // For maps, iterator points to a pair
+    string name = it->first;   // "Alice"
+    int age = it->second;      // 25
+    
+    // Or dereference to get the whole pair
+    auto pair = *it;  // pair.first = "Alice", pair.second = 25
+}
