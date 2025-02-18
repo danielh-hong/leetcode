@@ -78,6 +78,8 @@ def minCostClimbingStairsBroken(cost):
             min_cost2 += cost[p + 1]
             p += 1
 
+        print("test")
+
     return min(min_cost2, min_cost)
   
 
