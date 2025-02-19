@@ -1,0 +1,5 @@
+iterators are like pointers but with more functionality (and therefore more overhead)
+
+.begin()
+.end() 
+.find() all return iterators
