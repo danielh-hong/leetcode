@@ -18,7 +18,7 @@ def mergeTwoLists2(list1, list2):
 	cur = ret
 	while list1 and list2:  # assuming last node's next is like "None" type
 		if list1.val <= list2.val:
-			cur.next = list1
+			cur.next = list1 # use cur.next since we don't want to rewrite value; we're just setting the pointer.
 			cur = cur.next
 			list1 = list1.next
 		else:
